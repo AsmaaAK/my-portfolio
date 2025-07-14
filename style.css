@@ -1,0 +1,290 @@
+:root {
+      --main-color: #406131;
+      --secondary-color: #0dc91a;
+      --bg-light: #fdfdfd;
+      --bg-dark: #1e1e1e;
+      --text-light: #fff;
+      --text-dark: #111;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--bg-light);
+      color: var(--text-dark);
+      transition: all 0.4s ease;
+      scroll-behavior: smooth;
+    }
+
+    #mode-toggle:checked ~ .mode {
+      background: var(--bg-dark);
+      color: var(--text-light);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--main-color), var(--secondary-color));
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      position: relative;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    /* #mode-toggle:checked ~ .body {
+      background: var(--bg-dark);
+      color: var(--text-light);
+    } */
+    /* #mode-toggle:checked ~ *{
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      /* padding: 0; 
+      margin: 0;
+    }  */
+    /* #mode-toggle:checked ~ header{
+     background:hsl(293, 54%, 47%);  
+     color: white; 
+     margin: 0;
+    }   */
+    /* #mode-toggle:checked ~ .intro {
+      background: var(--bg-dark);
+      color: var(--text-light);
+    } */
+    .down-arrow{
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2rem;
+      color: var(--main-color);
+      animation: bounce 1.5s infinite;
+      text-decoration: none;
+    }
+    @keyframes bounce{
+      100%, 0%{
+        transform: translate(-50%,0);
+      }
+      50%{
+        transform: translate(-50%,10px);
+      }
+    }
+    #mode-toggle:checked ~ .mode #skills .card {
+      background: var(--bg-light);
+      color: var(--bg-dark);
+    }
+    #mode-toggle:checked ~ .mode #skills h2 {
+      /* color: var(--bg-dark); */
+       color: var(--text-light);
+      }
+      #mode-toggle:checked ~ .mode #portfolio h2{
+      /* color: var(--bg-dark); */
+      color: var(--text-light);
+      }
+      #mode-toggle:checked ~ .mode #portfolio .card {
+      color: var(--bg-dark);
+      /* color: var(--text-light); */
+      }
+      #mode-toggle:checked ~ .mode #contact p {
+      color: var(--main-color);
+      /* background: var(--text-light); */
+      }
+      #mode-toggle:checked ~ .mode #contact h2 {
+      color: var(--text-light);
+      /* background: var(--text-light); */
+      }      
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Hamburger */
+    #nav-toggle {
+      display: none;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    #nav-toggle:checked ~ nav ul {
+      display: flex;
+      flex-direction: column;
+      background: var(--main-color);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .toggle-mode-label {
+      cursor: pointer;
+      font-size: 1.3rem;
+      color: white;
+    }
+
+    /* Layout */
+    .intro {
+      /* position: relative; */
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid var(--main-color);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05) rotate(1deg);
+    }
+   header nav ul:active {
+    background-color: white;
+      
+    }
+    #portfolio{
+      margin: auto;
+      padding: auto;
+    }
+
+    .bio {
+      margin-top: 1rem;
+      font-size: 30px;
+      font-weight: bolder;
+      font-family: 'Times New Roman', Times, serif;
+      animation: fadeIn 1.5s ease-in;
+    }
+    @keyframes fadeIn{
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* nav a:active{
+      border-bottom: 2px solid white;
+    } */
+
+    section {
+      max-width: 1000px;
+      /* text-align: center; */
+      margin: auto;
+      padding: 1rem;
+    }
+
+    .card {
+      background: #fff;
+      font-size: large;
+      font-family: 'Times New Roman', Times, serif;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .dark-mode:checked ~ body .card {
+      background: #333;
+      color: #fff;
+    }
+    .form-box{
+    margin-top: 30px;
+}
+.input-group input{
+    width: 45%;
+    border: 0;
+    outline: none;
+    padding: 10px;
+    background-color: rgb(226, 226, 226);
+    margin: 1%;
+    display: inline-block;
+
+}
+.text-area textarea{
+    width: 92.5%;
+    border: 0;
+    padding: 10px;
+    background-color: rgb(226, 226, 226);
+    margin: 1%;
+    outline: none;
+    
+}
+.sub{
+    border: 0;
+    padding: 10px;
+    background-color: rgb(46, 142, 17);
+    margin: 1%;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--main-color);
+      color: white;
+      border-radius: 25px;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: large;
+      background: var(--main-color);
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .hamburger {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: white;
+      } 
+     #nav-toggle:checked ~ header nav ul {
+      display: flex;
+      flex-direction: column;
+      background: var(--main-color);
+      position: absolute;
+      top: 40px;
+      right: 0;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    /* #nav-toggle:checked ~ header nav ul:hover{
+      transition: transform 0.3ms ease;
+    } */
+    }

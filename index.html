@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asmaa AK - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Dark mode -->
+  <input type="checkbox" id="mode-toggle" class="dark-mode" hidden>
+  <input type="checkbox" id="nav-toggle" hidden>
+
+  <header>
+    <h1>Asmaa</h1>
+    <input type="checkbox" id="nav-toggle" hidden>
+    <label for="nav-toggle" class="hamburger"><i class="fas fa-bars"></i></label>
+    <nav>
+      <ul>
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <label for="mode-toggle" class="toggle-mode-label"><i class="fas fa-moon"></i></label>
+  </header>
+  <main class="mode"> 
+  <div class="intro" id="bio">
+    <img src="img.jpg" class="profile-img" alt="Asmaa">
+    <p class="bio">Hello, I am Asmaa, web devloper, interested in providing creative solutions</p>
+    <a href="#skills" class="down-arrow"><i class="fas fa-angle-down"></i></a>
+  </div>
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="card">HTML, CSS, JavaScript</div>
+    <div class="card">Responsive Design & UX</div>
+    <div class="card">Git & GitHub</div>
+    <!-- <a href="#protfolio" class="down-arrow"><i class="fas fa-angle-down"></i></a> -->
+  </section>
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="card">Project 1: Landing Page</div>
+    <div class="card">Project 2: Interactive Portfolio</div>
+  </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+          <div class="input-group">
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name">
+            </div>
+            <div class="input-group">
+                <input type="number" placeholder="Phone number">
+                <input type="email" placeholder="E-mail">
+            </div>
+            <div class="text-area">
+                <textarea rows="4" placeholder="Write Your Massage"></textarea>
+            </div>
+            <button type="reset" class="sub" title="Are you sure?">Send Massage !!</button>
+        </form>
+    <a class="download-btn" href="Asmaa_CV.pdf" download><i class="fas fa-download"></i> Download CV</a>
+  </section>
+  <footer>
+    <p>© 2025 Asmaa. All rights reserved.</p>
+  </footer>
+  </main>
+</body>
+</html>
