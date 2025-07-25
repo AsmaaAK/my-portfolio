@@ -8,63 +8,130 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button id="toggleSidebar">&#9776;</button>
+  <div class="sidebar" id="sidebar"><a href="#" class="closebtn" onclick="closeSlidebar()">&times;</a></div>
   <!-- Dark mode -->
   <input type="checkbox" id="mode-toggle" class="dark-mode" hidden>
-  <input type="checkbox" id="nav-toggle" hidden>
-
   <header>
-    <h1>Asmaa</h1>
     <input type="checkbox" id="nav-toggle" hidden>
+    <h1>Asmaa</h1>
     <label for="nav-toggle" class="hamburger"><i class="fas fa-bars"></i></label>
     <nav>
       <ul>
         <li><a href="#bio">Bio</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#portfolio">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
     <label for="mode-toggle" class="toggle-mode-label"><i class="fas fa-moon"></i></label>
   </header>
-  <main class="mode"> 
   <div class="intro" id="bio">
-    <img src="img.jpg" class="profile-img" alt="Asmaa">
-    <p class="bio">Hello, I am Asmaa, web devloper, interested in providing creative solutions</p>
+    <div class="image-container">
+    <i class="fab fa-html5 html-icon move-icon"></i>
+    <i class="fab fa-css3-alt css-icon move-icon"></i>
+    <i class="fab fa-js js-icon move-icon"></i>
+    </div>
+    <div class="profile-img">
+    <img src="images/img.jpg" alt="Asmaa"><br>
+    </div>
+    <div class="text">
+     <h3>Hello, I am Asmaa</h3>
+     <p class="bio">I am a web devloper, interested in providing creative solutions</p>
+    </div>
     <a href="#skills" class="down-arrow"><i class="fas fa-angle-down"></i></a>
   </div>
-  <section id="skills">
-    <h2>My Skills</h2>
-    <div class="card">HTML, CSS, JavaScript</div>
-    <div class="card">Responsive Design & UX</div>
-    <div class="card">Git & GitHub</div>
-    <!-- <a href="#protfolio" class="down-arrow"><i class="fas fa-angle-down"></i></a> -->
-  </section>
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="card">Project 1: Landing Page</div>
-    <div class="card">Project 2: Interactive Portfolio</div>
-  </section>
-  <section id="contact">
+  <div class="summary">
+    <h2>summary:</h2>
+      <p class="about">
+            An energetic engineer looking for a challenging position where I can apply the concepts,
+            techniques and methodologies of management information systems and also create management
+            and accounting information systems in an organization that provides an environment that
+            supports the need for creativity and self-development.  
+        </p>
+  </div>
+ <article id="skills" class="skills-section">
+    <h2>My Skills:</h2>
+    <p class="section-subtitle">I offer professional web development and digital solutions.</p>
+
+    <div class="skills-grid">
+      <article class="skill-card">
+        <i class="fas fa-laptop-code service-icon"></i>
+        <h3>Web Design</h3>
+        <p>Designing modern, attractive, and responsive websites tailored to your needs.</p>
+      </article>
+
+      <article class="skill-card">
+        <i class="fas fa-code service-icon"></i>
+        <h3>Web Development</h3>
+        <p>Developing robust and scalable web applications using the latest technologies.</p>
+      </article>
+
+      <article class="skill-card">
+        <i class="fas fa-pen-nib service-icon"></i>
+        <h3>UI/UX Design</h3>
+        <p>Creating intuitive and engaging user experiences and interfaces.</p>
+      </article>
+
+      <article class="skill-card">
+        <i class="fas fa-photo-video service-icon"></i>
+        <h3>SEO & Optimization</h3>
+        <p>Improving website speed, SEO, and overall performance for better results.</p>
+      </article>
+    </div>
+  </article>
+  <button class="scroll-top" onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+
+  <section id="portfolio" class="projects-section">
+  <h2>My Projects</h2>
+  <p class="section-subtitle">Some of the work I’ve built recently.</p>
+  <div class="projects-grid">
+    <div class="project-card">
+      <!-- <img src="images/project1.png" alt="Project 1 Screenshot" /> -->
+      <h3>Portfolio Website</h3>
+      <p>A personal website to showcase my work, built with HTML, CSS, and JavaScript.</p>
+      <div class="project-links">
+        <a href="https://your-demo-link.com" target="_blank">Live Demo</a>
+        <a href="https://github.com/AsmaaAK/my-portfolio" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <!-- <img src="images/project2.png" alt="Project 2 Screenshot" /> -->
+      <h3>Employee Management</h3>
+      <p>A simple mployee management app with localStorage support and dynamic UI updates.</p>
+      <div class="project-links">
+        <a href="https://your-demo-link.com" target="_blank">Live Demo</a>
+        <a href="https://github.com/AsmaaAK/employee-management-App-crud" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+  <section id="contact"  class="send-me">
     <h2>Contact Me</h2>
     <form>
           <div class="input-group">
-                <input type="text" placeholder="First name">
-                <input type="text" placeholder="Last name">
+                <input type="text" placeholder="First name" required>
+                <input type="text" placeholder="Last name"required>
             </div>
             <div class="input-group">
-                <input type="number" placeholder="Phone number">
-                <input type="email" placeholder="E-mail">
+                <input type="number" placeholder="Phone number" required>
+                <input type="email" placeholder="E-mail" required>
             </div>
             <div class="text-area">
-                <textarea rows="4" placeholder="Write Your Massage"></textarea>
+                <textarea rows="4" placeholder="Write Your Massage" required></textarea>
             </div>
-            <button type="reset" class="sub" title="Are you sure?">Send Massage !!</button>
+            <button type="submit" class="sub" title="Are you sure?">Send Massage !!</button>
         </form>
     <a class="download-btn" href="Asmaa_CV.pdf" download><i class="fas fa-download"></i> Download CV</a>
   </section>
   <footer>
     <p>© 2025 Asmaa. All rights reserved.</p>
   </footer>
-  </main>
+  <script src="main.js"></script>
 </body>
 </html>
+
+
+
+
